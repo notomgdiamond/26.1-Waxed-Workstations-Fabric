@@ -38,7 +38,7 @@ public final class WaxedWorkstations implements ModInitializer {
             Optional<Holder<PoiType>> optional = PoiTypes.forState(state);
             if (optional.isEmpty()) return InteractionResult.PASS;
             Holder<PoiType> holder = optional.get();
-            ResourceKey<PoiType> key = holder.getKey();
+            ResourceKey<PoiType> key = holder.unwrapKey().orElse(null);
             if (key == null || EXCLUDED.contains(key)) return InteractionResult.PASS;
             PoiManager manager = server.getPoiManager();
             boolean exists = manager.existsAtPosition(key, pos);
