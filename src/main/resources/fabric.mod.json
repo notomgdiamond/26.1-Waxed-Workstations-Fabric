@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "waxed_workstations",
+  "version": "${version}",
+  "name": "Waxed Workstations (26.1 Fabric port)",
+  "description": "Wax villager workstations with honeycomb; remove wax with an axe.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.lqdfxnet.waxedworkstations.WaxedWorkstations"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.1",
+    "minecraft": "26.1",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
